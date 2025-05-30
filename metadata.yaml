@@ -3,6 +3,8 @@ kind: Addons
 metadata:
   name: addons
 spec:
+  description: "My KubeVela addons registry"
+  version: "1.0.0"
   addons:
     - name: kafka
       path: kafka
