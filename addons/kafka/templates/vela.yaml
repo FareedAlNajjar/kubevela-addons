@@ -1,20 +1,19 @@
 apiVersion: core.oam.dev/v1beta1
-kind: Application
+kind: Component
 metadata:
   name: kafka
 spec:
-  components:
-    - name: kafka
-      type: helm
-      properties:
-        repoType: helm
-        url: https://charts.bitnami.com/bitnami
-        chart: kafka
-        version: 26.3.2
-        values:
-          replicaCount: 1
-          zookeeper:
+  workload:
+    type: helm
+    properties:
+      repoType: helm
+      url: https://charts.bitnami.com/bitnami
+      chart: kafka
+      version: 26.3.2
+      values:
+        replicaCount: 1
+        zookeeper:
+          enabled: true
+        metrics:
+          kafka:
             enabled: true
-          metrics:
-            kafka:
-              enabled: true
