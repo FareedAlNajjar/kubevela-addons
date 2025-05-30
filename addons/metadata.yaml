@@ -1,0 +1,9 @@
+apiVersion: addons.kubevela.io/v1alpha1
+kind: Addons
+metadata:
+  name: addons
+spec:
+  addons:
+    - name: kafka
+      path: kafka
+      version: 1.0.0
