@@ -1,0 +1,6 @@
+name: kafka
+version: 1.0.0
+description: Apache Kafka for data streaming
+tags:
+  - kafka
+  - streaming
